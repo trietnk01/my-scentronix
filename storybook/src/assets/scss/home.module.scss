@@ -1,0 +1,154 @@
+@import "color.scss";
+@import "font.scss";
+.box {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  @media (max-width: 576px) {
+    width: 100%;
+    height: 100vh;
+  }
+  .buttonClickTop {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .buttonClickBottom {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  .productBox {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    opacity: 0;
+    transform: translateY(5px);
+    transition:
+      opacity 300ms,
+      transform 300ms;
+    transition-timing-function: ease-in;
+    @media (max-width: 576px) {
+      top: 60px;
+    }
+  }
+  .productBox.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .productBoxB {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    opacity: 0;
+    transform: translateY(5px);
+    transition:
+      opacity 300ms,
+      transform 300ms;
+    transition-timing-function: ease-in;
+    @media (max-width: 576px) {
+      bottom: 60px;
+    }
+  }
+  .productBoxB.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .item {
+    display: flex;
+    padding: 14px 15px;
+    justify-content: space-between;
+    width: 300px;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    background: white;
+    .kcicle {
+      display: flex;
+      column-gap: 10px;
+      .bottle {
+        font-family: $f_KontrapunktMiki_Bold;
+      }
+    }
+    .price {
+      font-family: $f_KontrapunktMiki_Bold;
+    }
+  }
+  .item2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 14px 15px;
+    width: 300px;
+    border-radius: 6px;
+    border: 1px solid #fff;
+    background: white;
+    .vancle {
+      display: flex;
+      justify-content: space-between;
+      .kcicle {
+        display: flex;
+        column-gap: 10px;
+        .bottle {
+          font-family: $f_KontrapunktMiki_Bold;
+        }
+      }
+      .price {
+        font-family: $f_KontrapunktMiki_Bold;
+      }
+    }
+    .tabca {
+      display: flex;
+      justify-content: flex-start;
+      .forml {
+        background-color: #e9e9e9;
+        padding: 3px 8px;
+        border: 1px solid #e9e9e9;
+        border-radius: 4px;
+        font-family: $f_GeneralSans_Medium;
+      }
+    }
+  }
+}
+.closeBox {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px;
+  .btnClose {
+    cursor: pointer;
+  }
+}
+.man {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 300ms;
+  transition-timing-function: ease-in;
+}
+.man.active {
+  opacity: 0.4;
+}
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
