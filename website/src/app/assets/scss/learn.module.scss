@@ -1,0 +1,10 @@
+@import "color.scss";
+@import "font.scss";
+@import "var.scss";
+.container {
+  width: $w_container;
+  .text {
+    text-align: justify;
+    margin-top: 20px;
+  }
+}

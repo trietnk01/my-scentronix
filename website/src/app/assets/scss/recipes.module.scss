@@ -1,0 +1,70 @@
+@import "color.scss";
+@import "font.scss";
+@import "var.scss";
+.container {
+  width: $w_container;
+}
+.slogan {
+  margin-top: 20px;
+  font-size: 40px;
+}
+.subContent {
+  margin: 20px 0 0 0;
+  font-size: 15px;
+  text-align: justify;
+}
+.boxDetail {
+  display: flex;
+  margin-top: 20px;
+  column-gap: 50px;
+  .boxIcon {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    .icon {
+      font-size: 30px;
+    }
+    .boxIconInfo {
+      .boxPrep {
+        font-family: $f_GeneralSans_Medium;
+        font-size: 11px;
+      }
+      .box10Mins {
+        font-family: $f_GeneralSans_Medium;
+      }
+    }
+  }
+}
+.line {
+  border-top: 1px solid rgb(238, 238, 238);
+  margin-top: 20px;
+}
+.product {
+  display: flex;
+  justify-content: space-between;
+  .productInfo {
+    width: 635px;
+  }
+  .productImg {
+    width: 500px;
+    margin-top: 30px;
+  }
+}
+.breadcrumbs {
+  margin: 20px 0 0 0;
+  display: flex;
+  list-style: none;
+  li {
+    margin: 0 20px;
+    position: relative;
+    &::after {
+      content: ">";
+      position: absolute;
+      top: 0;
+      right: -20px;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}

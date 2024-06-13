@@ -1,0 +1,68 @@
+@import "color.scss";
+@import "font.scss";
+@import "var.scss";
+.container {
+  width: $w_container;
+  .text {
+    text-align: justify;
+    margin-top: 20px;
+  }
+}
+.newsBox {
+  margin-top: 40px;
+  border-right: 1px solid rgba(5, 5, 5, 0.08);
+  padding: 0 20px 0 0;
+  .itemNews {
+    display: flex;
+    column-gap: 20px;
+    border-top: 1px solid rgba(5, 5, 5, 0.08);
+    padding: 30px 0px;
+    @media (max-width: 576px) {
+      display: block;
+    }
+    .newsImg {
+      @media (max-width: 992px) {
+        width: 300px;
+      }
+      @media (max-width: 576px) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+    .itemInfo {
+      .titleCategory {
+        color: #8b8b8b;
+        font-size: 13px;
+      }
+      .titleNews {
+        margin-top: 10px;
+        a {
+          text-decoration: none;
+          color: #666;
+          font-size: 20px;
+          font-family: $f_KontrapunktMiki_Bold;
+        }
+      }
+      .introNews {
+        margin-top: 10px;
+        font-size: 16px;
+        color: #4f4f4f;
+        font-family: $f_KontrapunktMiki_Regular;
+        text-align: justify;
+        position: relative;
+        padding: 0px 35px;
+        margin: 25px 0px 0px 0px;
+        &::before {
+          content: "";
+          width: 5px;
+          height: 5px;
+          position: absolute;
+          left: 10px;
+          top: 8px;
+          border: 1px solid #8b8b8b;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
